@@ -1,0 +1,19 @@
+# .NET
+bin/
+obj/
+
+# Visual Studio
+.vscode/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.pdb
+*.log
+*.cache
+*.db
+*.testsettings
+*.vspscc
