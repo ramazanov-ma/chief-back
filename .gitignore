@@ -1,7 +1,3 @@
-# .NET
-bin/
-obj/
-
 # Visual Studio
 .vscode/
 .vs/
@@ -17,3 +13,25 @@ obj/
 *.db
 *.testsettings
 *.vspscc
+
+# Entity Framework Migrations
+Migrations/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Git directory
+.git/
+
+# IDEA directory
+.idea/
+
+Chief.Api/bin
+Chief.Api/obj
+Chief.Application/bin
+Chief.Application/obj
+Chief.Domain/bin
+Chief.Domain/obj
+Chief.Infrastructure/bin
+Chief.Infrastructure/obj
