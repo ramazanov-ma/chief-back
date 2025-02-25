@@ -1,6 +1,6 @@
 namespace Chief.Domain.Entities;
 
-public sealed class OnboardingEntity
+public class OnboardingEntity
 {
     public int Id { get; init; }
     public string? UserName { get; init; }

@@ -17,7 +17,7 @@ namespace Chief.Api
             services.AddControllers();
 
             services.AddDbContext<OnboardingContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped<IOnboardingService, OnboardingService>();
             services.AddScoped<IOnboardingRepository, OnboardingRepository>();
@@ -47,7 +47,6 @@ namespace Chief.Api
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
 
-            // Настройка Swagger
             app.UseSwagger();
             app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"); });
         }
