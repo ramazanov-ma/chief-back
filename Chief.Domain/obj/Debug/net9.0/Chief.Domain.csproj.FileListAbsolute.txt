@@ -1,0 +1,12 @@
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Domain/bin/Debug/net9.0/Chief.Domain.deps.json
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Domain/bin/Debug/net9.0/Chief.Domain.dll
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Domain/bin/Debug/net9.0/Chief.Domain.pdb
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Domain/obj/Debug/net9.0/Chief.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Domain/obj/Debug/net9.0/Chief.Domain.AssemblyInfoInputs.cache
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Domain/obj/Debug/net9.0/Chief.Domain.AssemblyInfo.cs
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Domain/obj/Debug/net9.0/Chief.Domain.csproj.CoreCompileInputs.cache
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Domain/obj/Debug/net9.0/Chief.Domain.sourcelink.json
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Domain/obj/Debug/net9.0/Chief.Domain.dll
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Domain/obj/Debug/net9.0/refint/Chief.Domain.dll
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Domain/obj/Debug/net9.0/Chief.Domain.pdb
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Domain/obj/Debug/net9.0/ref/Chief.Domain.dll

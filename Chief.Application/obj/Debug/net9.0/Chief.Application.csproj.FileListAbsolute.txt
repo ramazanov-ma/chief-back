@@ -1,0 +1,16 @@
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/bin/Debug/net9.0/Chief.Application.deps.json
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/bin/Debug/net9.0/Chief.Application.dll
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/bin/Debug/net9.0/Chief.Application.pdb
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/bin/Debug/net9.0/Chief.Domain.dll
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/bin/Debug/net9.0/Chief.Domain.pdb
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/obj/Debug/net9.0/Chief.Application.csproj.AssemblyReference.cache
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/obj/Debug/net9.0/Chief.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/obj/Debug/net9.0/Chief.Application.AssemblyInfoInputs.cache
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/obj/Debug/net9.0/Chief.Application.AssemblyInfo.cs
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/obj/Debug/net9.0/Chief.Application.csproj.CoreCompileInputs.cache
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/obj/Debug/net9.0/Chief.Application.sourcelink.json
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/obj/Debug/net9.0/Chief.Ap.BB07AD6D.Up2Date
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/obj/Debug/net9.0/Chief.Application.dll
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/obj/Debug/net9.0/refint/Chief.Application.dll
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/obj/Debug/net9.0/Chief.Application.pdb
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/obj/Debug/net9.0/ref/Chief.Application.dll

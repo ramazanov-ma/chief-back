@@ -1,0 +1,16 @@
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Infrastructure/bin/Debug/net9.0/Chief.Infrastructure.deps.json
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Infrastructure/bin/Debug/net9.0/Chief.Infrastructure.dll
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Infrastructure/bin/Debug/net9.0/Chief.Infrastructure.pdb
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Infrastructure/bin/Debug/net9.0/Chief.Domain.dll
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Infrastructure/bin/Debug/net9.0/Chief.Domain.pdb
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Infrastructure/obj/Debug/net9.0/Chief.Infrastructure.csproj.AssemblyReference.cache
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Infrastructure/obj/Debug/net9.0/Chief.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Infrastructure/obj/Debug/net9.0/Chief.Infrastructure.AssemblyInfoInputs.cache
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Infrastructure/obj/Debug/net9.0/Chief.Infrastructure.AssemblyInfo.cs
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Infrastructure/obj/Debug/net9.0/Chief.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Infrastructure/obj/Debug/net9.0/Chief.Infrastructure.sourcelink.json
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Infrastructure/obj/Debug/net9.0/Chief.In.28A908C1.Up2Date
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Infrastructure/obj/Debug/net9.0/Chief.Infrastructure.dll
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Infrastructure/obj/Debug/net9.0/refint/Chief.Infrastructure.dll
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Infrastructure/obj/Debug/net9.0/Chief.Infrastructure.pdb
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Infrastructure/obj/Debug/net9.0/ref/Chief.Infrastructure.dll
