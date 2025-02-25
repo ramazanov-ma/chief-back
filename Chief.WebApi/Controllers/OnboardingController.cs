@@ -14,7 +14,9 @@ namespace Chief.Api.Controllers
         public IActionResult StartOnboarding([FromBody] OnboardingDto model)
         {
             var entity = mapper.Map<OnboardingEntity>(model);
+            
             var result = onboardingService.StartOnboarding(entity);
+            
             return Ok(result);
         }
     }
