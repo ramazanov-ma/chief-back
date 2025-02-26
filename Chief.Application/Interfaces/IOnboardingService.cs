@@ -1,9 +1,9 @@
-using Chief.Domain.Entities;
+using Chief.Application.DTOs;
 
-namespace Chief.Application.Interfaces
+namespace Chief.Application.Interfaces;
+
+public interface IOnboardingService
 {
-    public interface IOnboardingService
-    {
-        bool StartOnboarding(OnboardingEntity entity);
-    }
+    Task<OnboardingProfileDto> GetProfileByUserIdAsync(int userId);
+    Task<OnboardingProfileDto> UpdateProfileAsync(int profileId, UpdateOnboardingProfileDto dto, int userId);
 }

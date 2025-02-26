@@ -16,11 +16,12 @@ namespace Chief.Api
         {
             services.AddControllers();
 
-            services.AddDbContext<OnboardingContext>(options =>
+            services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped<IOnboardingService, OnboardingService>();
             services.AddScoped<IOnboardingRepository, OnboardingRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
 
             services.AddAutoMapper(typeof(Startup));
             services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" }); });

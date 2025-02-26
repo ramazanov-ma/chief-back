@@ -14,3 +14,5 @@
 /Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/obj/Debug/net9.0/refint/Chief.Application.dll
 /Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/obj/Debug/net9.0/Chief.Application.pdb
 /Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/obj/Debug/net9.0/ref/Chief.Application.dll
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/bin/Debug/net9.0/Chief.Infrastructure.dll
+/Users/mramazanov/Documents/repos/chief-back/Chief/Chief.Application/bin/Debug/net9.0/Chief.Infrastructure.pdb

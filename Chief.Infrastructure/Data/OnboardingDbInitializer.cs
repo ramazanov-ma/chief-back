@@ -4,7 +4,7 @@ namespace Chief.Infrastructure.Data
 {
     public static class OnboardingDbInitializer
     {
-        public static void Initialize(OnboardingContext context)
+        public static void Initialize(ApplicationDbContext context)
         {
             context.Database.EnsureCreated();
 
