@@ -7,13 +7,15 @@ using Chief.Application.Interfaces;
 using Chief.Domain.Entities;
 using Chief.Domain.Interfaces;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Chief.Application.Services;
 
 public sealed class TelegramAuthService(
     IUserRepository userRepository,
-    IConfiguration configuration) : ITelegramAuthService
+    IConfiguration configuration,
+    ILogger<TelegramAuthService> logger) : ITelegramAuthService
 {
     private readonly string? _botToken = configuration["Telegram:BotToken"];
     private readonly string? _jwtSecret = configuration["JWT:Secret"];
@@ -172,5 +174,72 @@ public sealed class TelegramAuthService(
             signingCredentials: credentials);
 
         return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+    
+    public bool ValidateInitData(string initData)
+    {
+        if (string.IsNullOrEmpty(initData))
+        {
+            return false;
+        }
+    
+        try
+        {
+            // Разбираем строку initData
+            var parts = initData.Split('&')
+                .Select(part => part.Split('='))
+                .ToDictionary(split => split[0], split => split[1]);
+        
+            // Извлекаем hash
+            if (!parts.TryGetValue("hash", out var hash))
+            {
+                return false;
+            }
+        
+            // Формируем проверочную строку (все параметры, кроме hash, отсортированные по ключу)
+            var checkString = string.Join("\n", parts
+                .Where(p => p.Key != "hash")
+                .OrderBy(p => p.Key)
+                .Select(p => $"{p.Key}={p.Value}"));
+        
+            // Получаем ключ на основе токена бота
+            using var sha256 = SHA256.Create();
+            var secretKey = sha256.ComputeHash(Encoding.UTF8.GetBytes(_botToken));
+        
+            // Вычисляем HMAC
+            using var hmac = new HMACSHA256(secretKey);
+            var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(checkString));
+            var computedHashString = BitConverter.ToString(computedHash).Replace("-", "").ToLower();
+        
+            // Сравниваем с переданным хешем
+            return computedHashString == hash.ToLower();
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex, "Error validating initData");
+            return false;
+        }
+    }
+
+    public async Task<User> AuthenticateWebAppUserAsync(TelegramUserDto telegramUser)
+    {
+        var user = await userRepository.GetByTelegramIdAsync(telegramUser.Id);
+    
+        if (user == null)
+        {
+            user = new User
+            {
+                TelegramUserId = telegramUser.Id,
+                FirstName = telegramUser.FirstName,
+                LastName = telegramUser.LastName,
+                TelegramUsername = telegramUser.Username,
+                LanguageCode = telegramUser.LanguageCode,
+                CreatedAt = DateTime.UtcNow
+            };
+        
+            await userRepository.CreateAsync(user);
+        }
+    
+        return user;
     }
 }

@@ -11,32 +11,40 @@ public class TelegramAuthController(
     ILogger<TelegramAuthController> logger)
     : ControllerBase
 {
-    [HttpPost("login")]
-    public async Task<IActionResult> Login([FromBody] TelegramAuthDto telegramAuth)
+    [HttpPost("initData")]
+    public async Task<IActionResult> ProcessInitData([FromBody] TelegramWebAppDto initDataDto)
     {
         try
         {
-            var user = await telegramAuthService.AuthenticateUserAsync(telegramAuth);
+            // Проверка подписи initData
+            bool isValid = telegramAuthService.ValidateInitData(initDataDto.InitData);
+            if (!isValid)
+            {
+                return Unauthorized("Invalid Telegram data signature");
+            }
+
+            // Создание или обновление пользователя
+            var user = await telegramAuthService.AuthenticateWebAppUserAsync(initDataDto.User);
+
+            // Генерация JWT токена
             var token = await telegramAuthService.GenerateApiTokenAsync(user);
 
-            return Ok(new 
-            { 
-                token, 
-                userId = user.Id,
-                telegramUserId = user.TelegramUserId,
-                firstName = user.FirstName,
-                lastName = user.LastName
+            return Ok(new
+            {
+                token,
+                user = new
+                {
+                    id = user.Id,
+                    firstName = user.FirstName,
+                    lastName = user.LastName,
+                    telegramId = user.TelegramUserId
+                }
             });
-        }
-        catch (UnauthorizedAccessException ex)
-        {
-            logger.LogWarning(ex, "Failed Telegram authentication attempt");
-            return Unauthorized(ex.Message);
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Error during Telegram authentication");
-            return StatusCode(500, "Internal server error during authentication");
+            logger.LogError(ex, "Error processing Telegram WebApp initData");
+            return StatusCode(500, "Error authenticating with Telegram");
         }
     }
 }
