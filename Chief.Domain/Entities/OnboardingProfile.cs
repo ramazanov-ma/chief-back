@@ -17,7 +17,7 @@ public class OnboardingProfile
 
     public int UserId { get; set; }
 
-    [ForeignKey("UserId")] public virtual User User { get; set; }
+    [ForeignKey("UserId")] public virtual User? User { get; set; }
 
     public virtual ICollection<FoodPreference> FoodPreferences { get; set; } = new List<FoodPreference>();
 

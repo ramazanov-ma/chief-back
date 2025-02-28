@@ -12,12 +12,10 @@ public class UserRepository(ApplicationDbContext context) : IUserRepository
         return await context.Users.FindAsync(id);
     }
 
-    public async Task<User?> GetByEmailAsync(string email)
+    public async Task<User?> GetByTelegramIdAsync(long telegramUserId)
     {
         return await context.Users
-            .FirstOrDefaultAsync(u =>
-                !string.IsNullOrEmpty(u.Email) && 
-                u.Email.ToLower() == email.ToLower());
+            .FirstOrDefaultAsync(u => u.TelegramUserId == telegramUserId);
     }
 
     public async Task<User> CreateAsync(User user)
@@ -32,5 +30,10 @@ public class UserRepository(ApplicationDbContext context) : IUserRepository
         context.Entry(user).State = EntityState.Modified;
         await context.SaveChangesAsync();
         return user;
+    }
+
+    public async Task<bool> ExistsAsync(long telegramUserId)
+    {
+        return await context.Users.AnyAsync(u => u.TelegramUserId == telegramUserId);
     }
 }
