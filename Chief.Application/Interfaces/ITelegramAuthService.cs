@@ -10,5 +10,5 @@ public interface ITelegramAuthService
     Task<string> GenerateApiTokenAsync(User user);
 
     bool ValidateInitData(string initData);
-    Task<User> AuthenticateWebAppUserAsync(TelegramUserDto telegramUser)
+    Task<User> AuthenticateWebAppUserAsync(TelegramUserDto telegramUser);
 }
